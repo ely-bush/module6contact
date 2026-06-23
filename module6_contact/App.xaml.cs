@@ -1,15 +1,15 @@
 ﻿namespace module6_contact
 {
     public partial class App : Application
-    {
-        public App()
         {
-            InitializeComponent();
+            public App()
+            {
+                InitializeComponent();
+                MainPage = new NavigationPage(new MainPage())
+                {
+                    BarBackgroundColor = Colors.White,
+                    BarTextColor = Color.FromArgb("#1C1C1E")
+                };
+            }
         }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
-    }
 }
